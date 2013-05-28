@@ -1,0 +1,12 @@
+{% block title  %} BIDS  {% endblock %}
+
+{% block header  %}
+<script type="text/javascript" src="static/js/jquery.min.js">        </script>
+<link rel="stylesheet" type="text/css" href="static/colorbox/colorbox.css"/>
+<script type="text/javascript" src="static/colorbox/jquery.colorbox-min.js"></script>
+{% endblock %}
+{% block body  %}
+<div id="info">
+<form  action="notify" method="get">Bidder_id: <input type="text" name="bidder_user"> Seller_id : <input type="text" name="seller_user"> <input type="submit" value="Submit" ></form>
+</div>
+{% endblock %}

@@ -1,0 +1,204 @@
+
+{% block title %}HardCode{% endblock %}
+ {% block header %}       <link rel="stylesheet" href="static/css/menu.css" type="text/css" />
+		<link rel="stylesheet" href="static/css/body.css" type="text/css" />
+		<link rel="stylesheet" href="static/css/bootstrap.css" type="text/css"/>
+		<link rel="stylesheet" href="static/css/bootstrap-responsive.css" type="text/css" />
+                <script type="text/javascript" src="/static/js/jquery.min.js">    
+      </script>
+    <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            #body{
+				padding : 5px;
+                font-family:Arial;
+                background:#fff url(images/bg.png) no-repeat top left;
+				height	:	600px;
+				min-width: 1240px;
+				font-size: 14px; 
+				margin : 5px;
+				
+            }
+
+			.bg-animation:hover{
+				background-image:url(images/hover-bg.gif);
+			}
+
+        </style>
+{% endblock %}
+{% block body %}
+	<div id="body">
+        
+			<img src="/static/images/logo.png" align="left" />
+        	
+		    <div class="navigation" id="nav">
+		        <div class="item user">
+                    <a href="#" class="icon"><h2></h2></a>
+                    
+                
+                </div>
+                <div class="item home">
+                    <a href="#" class="icon"><h2></h2></a>
+                    
+                  
+                </div>
+                <div class="item shop">
+                    <a href="#" class="icon"><h2></h2></a>
+                    
+                  
+                </div>
+                <div class="item camera">
+                    <a href="#" class="icon"><h2></h2></a>
+                    
+                   
+                </div>
+                <div class="item fav">
+                    <a href="#" class="icon"><h2></h2></a>
+                    
+           
+                </div>
+            </div>
+			
+			<div id="login">
+				<input value="username" class="inputHome" 
+				onblur="if (this.value == '') {this.value = 'username';}"
+				onfocus="if (this.value == 'username') {this.value = '';}"/>
+				
+				<input type="password" value="123456789" class="inputHome"
+				onblur="if (this.value == '') {this.value = '123456789';}"
+				onfocus="if (this.value == '123456789') {this.value = '';}"/> 
+				
+				<input type="submit" value="Sign in" class="submitHome"/>
+				<br />
+				<span style=" margin: 5px;">
+				<!-- reg Starts Here -->
+				<div id="regContainer">
+					<a href="#" id="regButton"><span>Register</span><em></em></a>
+					<div style="clear:both"></div>
+					<div id="regBox">                
+                    <form id="regForm" method='post' action='registeration/register'>
+                        <fieldset >
+                            <fieldset>
+                                <label for="username">User Name</label>
+                                {{form.username}}
+                            </fieldset>
+                             <fieldset>
+                                <label for="email">Email Id</label>
+                                {{form.email}}
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                {{form.password1}}
+                            </fieldset>
+							<fieldset>
+                                <label for="conpassword">Confirm Password</label>
+                                {{form.password2}}
+                            </fieldset>
+                            <input type="submit" id="reg" value="Register" />
+                        </fieldset>
+                    </form>
+					</div>
+				</div>
+            <!-- reg Ends Here -->
+			
+						
+			</span>
+			<span style=" margin: 5px; ">			
+			<a href="#" class="bg-animation">Forgot Password</a>
+			
+			</span>
+			<span >	
+			<input type="checkbox" /> Remember Me
+			
+			</span>
+			</div>
+		
+			<div id="search">
+				<input type="search" value="Search" class="searchbox"name="Search" id="Email"
+				onblur="if (this.value == '') {this.value = 'Search';}"
+				onfocus="if (this.value == 'Search') {this.value = '';}" >
+				<input type="submit" value="Go" class="searchbutton"/>
+				</br>
+				<select id="advType" class="advSbox">
+					<option>Type</option>
+					<option>Books</option>
+					<option>Notes</option>
+					<option>Projects</option>
+					<option>Tuition</option>
+					<option>Accessories</option>
+				</select>
+				<input type="text" value="Price" name="Sprice" id="Sprice" class="advSbox" 
+				onblur="if (this.value == '') {this.value = 'Price';}"
+				onfocus="if (this.value == 'Price') {this.value = '';}"/></br>
+				<input type="text" value="Description" name="Sdesc" id="Sdesc" class="Sdesc" 
+				onblur="if (this.value == '') {this.value = 'Description';}"
+				onfocus="if (this.value == 'Description') {this.value = '';}"/>
+				</span>
+			</div>
+			<div id="circles">
+			<img src="/static/images/150.png"  /> 
+				<img src="/static/images/150.png" align="left" style="margin:20px;"/>  </br></br></br>
+						
+			<img src="/static/images/150.png" style="margin:20px;" align="right"/> </br> </br> </br>
+				<img src="/static/images/150.png" style="margin:0 0 0 50px;"/>
+						
+		      
+			</div>
+			<div id="flexible">
+			<div class="container-fluid">
+						
+			I want to create a "scorecard" grid to output some data. If the data in each div.item is 
+			all the same height, then a simple float left on each div.item gives a nice even layout
+			which scales up and down nicely depending on browser size.
+
+			If the data however is variable, a different number of lines in each div, then the way 
+			elements float gives an uneven and messy output. See code sample below. If you create a page
+			with the below, resize the browser to about 800px wide so that box 1, 2, and 3 create a "row" 
+			on top, followed by 4, 5 and 6. How do I get 7 to drop down to the next line so it creates a
+			row along with 8 and 9?
+
+			Obviously if you resize the browser so that 4 divs appear in each row, number 9 is the element
+			I want to break down below 5. Is there something obvious I am missing or do I need to use 
+			some Javascript to achieve this?
+			
+				I want to create a "scorecard" grid to output some data. If the data in each div.item is 
+			all the same height, then a simple float left on each div.item gives a nice even layout
+			which scales up and down nicely depending on browser size.
+
+			If the data however is variable, a different number of lines in each div, then the way 
+			elements float gives an uneven and messy output. See code sample below. 
+
+       
+			</div>
+		</div>
+			
+        </div>
+		
+	<script>    
+		// reg Form
+
+	$(function() {
+		var button = $('#regButton');
+		var box = $('#regBox');
+		var form = $('#regForm');
+		button.removeAttr('href');
+		button.mouseup(function(reg) {
+			box.toggle();
+			button.toggleClass('active');
+		});
+		form.mouseup(function() { 
+			return false;
+		});
+		$(this).mouseup(function(reg) {
+			if(!($(reg.target).parent('#regButton').length > 0)) {
+				button.removeClass('active');
+				box.hide();
+			}
+		});
+	});
+
+	</script>
+	
+{% endblock %}

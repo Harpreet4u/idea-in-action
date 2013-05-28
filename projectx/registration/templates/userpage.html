@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Kweken Profile{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+  <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+  <p>Welcome, new user. Please log in.</p>
+{% endif %}
+<script>
+  var uid = {{user.id}}
+</script>
+{% endblock %}

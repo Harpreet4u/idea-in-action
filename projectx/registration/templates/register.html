@@ -1,0 +1,16 @@
+{% extends "registration/base.html" %}
+
+{% block title %}Sign Up Form {% endblock %}
+
+{% block registration %}
+  <h1>Create an account</h1>
+{% csrf_token %}
+  <form action="/register/register/" method="post">
+      {% csrf_token %}
+      Username : {{ form.username }}<br>
+      Email   :  {{form.email}}
+      Password : {{form.password1}}<br>
+      RePassword : {{form.password2}}<br>
+      <input type="submit" value="Create the account">
+  </form>
+{% endblock %}

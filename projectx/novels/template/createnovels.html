@@ -1,0 +1,20 @@
+{% block title %}Writer{% endblock title %}
+{% block header %}
+    <script type='text/javascript' src='/novels/static/js/jquery.min.js'></script>
+    <script type='text/javascript' src='/novels/static/js/jquery-ui.min.js'></script>
+    <link rel="stylesheet" href="/novels/editor/static/css/monocons.css" type="text/css" media="all" />
+    <script src="/novels/editor/static/jquery.sceditor.js"></script>
+    <script src="/novels/static/js/noveleditor.js"></script>
+    <script>
+        var user_id=1
+    </script>
+{%endblock header%}
+{% block body %}
+   <div> <b>Title</b><input type="text" name="title" style="width:1000px;" placeholder="Title"> </div> 
+   <div> <b>Description</b><input type="text" name="description" style="width:1000px"></div>
+   <div> <b>Description Tags</b><input type="text" name="description_tags" style="width:1000px"></div>
+   <div>
+     <textarea id="novel_content" name="body" style="width:1000px;height:500px;"></div>
+{% endblock %}
+    
+
